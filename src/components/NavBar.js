@@ -1,22 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-function Navbar() {
+import { Routes, Route } from 'react-router-dom';
+import React from 'react';
+import Home from './Home';
+import CreateAccount from './CreateAccount';
+import Login from './Login';
+
+function AppRoutes() {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/login">Login</Link>
-        </li>
-        <li>
-          <Link to="/create-account">Create Account</Link>
-        </li>
-      </ul>
-    </nav>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/createaccount" element={<CreateAccount />} />
+      <Route path="/login" element={<Login />} />
+    </Routes>
   );
 }
 
-export default Navbar;
+export default AppRoutes;
