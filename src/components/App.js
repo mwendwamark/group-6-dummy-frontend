@@ -1,4 +1,7 @@
+import React from "react";
 import "./App.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faGoogle } from "@fortawesome/free-brands-svg-icons";
 
 function App() {
   return (
@@ -14,14 +17,17 @@ function App() {
         <label htmlFor="password">Password</label>
         <input type="password" placeholder="Password" id="password" />
         <button>Log In</button>
-        <div className="social">
+        {/* <div className="social">
           <div className="go">
-            <i className="fab fa-google"></i> Google
+            <p className="icon-text">Google</p>
+
+            <FontAwesomeIcon icon={faGoogle} className="fa-icon" />
           </div>
           <div className="fb">
-            <i className="fab fa-facebook"></i> Facebook
+            <p className="icon-text"> Facebook</p>
+            <FontAwesomeIcon icon={faFacebook} className="fa-icon" />
           </div>
-        </div>
+        </div> */}
       </form>
     </>
   );
