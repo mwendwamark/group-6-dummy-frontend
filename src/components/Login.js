@@ -1,61 +1,47 @@
-import React, { useState } from "react";
+import React from "react";
+import "./App.css";
+import { useState } from "react";
+function Login({ onLogin }) {
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
-function Login({ handleLogin }) {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
-    if (username === 'yourUsername' && password === 'yourPassword') {
-      // Call handleLogin to set isLoggedIn to true
-      handleLogin();
-    } else {
-      // Show an error message or handle invalid login
-      console.log('Invalid login credentials');
-    }
-  };
-
-  const handleUsernameChange = (event) => {
-    setUsername(event.target.value);
-  };
-
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  };
-
+  function handleSubmit(e) {
+    e.preventDefault();
+    fetch("/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, password }),
+    })
+      .then((res) => res.json())
+      .then((user) => onLogin(user));
+  }
   return (
     <>
       <div className="background">
         <div className="shape"></div>
         <div className="shape"></div>
       </div>
-      <form onSubmit={handleFormSubmit}>
-        <h3>Login Here</h3>
+      <form className="login-Form" onSubmit={handleSubmit}>
+        <h3>Login</h3>
         <label htmlFor="username">Username</label>
         <input
           type="text"
           placeholder="Email or Phone"
           id="username"
-          value={username}
-          onChange={handleUsernameChange}
+          onChange={(e) => setUsername(e.target.value)}
+          required
         />
         <label htmlFor="password">Password</label>
         <input
           type="password"
           placeholder="Password"
           id="password"
-          value={password}
-          onChange={handlePasswordChange}
+          onChange={(e) => setPassword(e.target.value)}
+          required
         />
-        <button>Log In</button>
-        <div className="social">
-          <div className="go">
-            <i className="fab fa-google"></i> Google
-          </div>
-          <div className="fb">
-            <i className="fab fa-facebook"></i> Facebook
-          </div>
-        </div>
+        <button type="submit">Log In</button>
       </form>
     </>
   );
