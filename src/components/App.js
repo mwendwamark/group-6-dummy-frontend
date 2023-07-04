@@ -1,4 +1,6 @@
+import CreateAccount from "../CreateAccount";
 import "./App.css";
+import React from "react";
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
           </div>
         </div>
       </form>
+      <CreateAccount />
     </>
   );
 }
