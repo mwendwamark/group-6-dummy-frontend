@@ -1,17 +1,17 @@
-import CreateAccount from "../CreateAccount";
-import Login from "../Login";
-import "./App.css";
-import React from "react";
-import Home from "../Home";
+import { BrowserRouter } from 'react-router-dom';
+import React from 'react';
+import AppRoutes from './AppRoutes';
+import NavBar from './NavBar';
 
 function App() {
+  
   return (
-    <>
-      <Home />
-      <CreateAccount />
-      <Login />
-    </>
-  );
-}
+  
+    <BrowserRouter>
+    <NavBar />
+    <AppRoutes />
+  </BrowserRouter>
 
-export default App;
+);}
+
+export default App
