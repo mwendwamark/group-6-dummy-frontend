@@ -1,161 +1,269 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+
+/* ========Home Page Stylings =========== */
+.home-container {
+margin-top: 30px;
+max-width: 100%;
+margin-left: 70px;
+justify-content: flex-start;
+height: 150vh;
+}
+.title {
+font-size: 70px;
+background-image: linear-gradient(to right, #1845ad, #f09819);
+background-clip: text;
+-webkit-background-clip: text;
+color: transparent;
+font-family: "poppins";
+}
+.title span {
+font-size: 90px;
+}
+.typing {
+background-image: linear-gradient(to right, #1845ad, #f09819);
+background-clip: text;
+-webkit-background-clip: text;
+color: transparent;
+font-size: 42px;
+width: 60%;
+}
+.description {
+width: 50%;
+font-size: 24px;
+line-height: 35px;
+font-family: "poppins";
+font-weight: 400;
+margin-top: 60px;
+}
+.h2-features {
+font-weight: 700;
+font-family: "poppins";
+font-size: 42px;
+margin-top: 20px;
+background-image: linear-gradient(to right, #1845ad, #f09819);
+background-clip: text;
+-webkit-background-clip: text;
+color: transparent;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.features {
+display: flex;
+font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.box-features {
+flex: 1;
+margin: 0 10px;
+padding: 20px;
+border-bottom: 2px solid rgb(74, 74, 212);
+border-left: 2px solid rgb(74, 74, 212);
+border-top: 2px solid orange;
+border-right: 2px solid orange;
+border-radius: 4px;
+background-color: #f1f7f9;
+}
+.box-features h3 {
+background-image: linear-gradient(to right, #ad5918, #f019199d);
+background-clip: text;
+-webkit-background-clip: text;
+color: transparent;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.task-image {
+position: absolute;
+right: 100px;
+top: 240px;
+height: 350px;
+width: 530px;
+border-radius: 7px;
+}
+.info {
+justify-content: flex-start;
+width: 55%;
+font-size: 21px;
+font-family: "poppins";
+}
+.get-started {
+width: 10%;
+margin-bottom: 200px;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* ===========Login Styles ========== */
+
+
 body {
-  background-color: whitesmoke;
+background: #f1f7f9;
+}
+.Form {
+height: 120vh;
 }
 .background {
-  width: 430px;
-  height: 480px;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
+width: 430px;
+height: 480px;
+position: absolute;
+transform: translate(-50%, -50%);
+left: 50%;
+top: 50%;
+margin-top: 100px;
 }
+
 
 .background .shape {
-  height: 200px;
-  width: 200px;
-  position: absolute;
-  border-radius: 50%;
+height: 200px;
+width: 200px;
+position: absolute;
+border-radius: 50%;
 }
 .shape:first-child {
-  background: linear-gradient(to right, #1845ad, #f09819);
-  left: -100px;
-  top: -150px;
+background: linear-gradient(to right, #1845ad, #f09819);
+left: -100px;
+top: -180px;
 }
 .shape:last-child {
-  background: linear-gradient(to right, #ff512f, #f09819);
-  right: -80px;
-  bottom: -120px;
+background: linear-gradient(to right, #ff512f, #f09819);
+right: -100px;
+bottom: -188px;
+margin-bottom: 20px;
 }
 form {
-  height: 520px;
-  width: 400px;
-  background: rgba( 255, 255, 255, 0.45 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 3px );
--webkit-backdrop-filter: blur( 3px );
+height: 610px;
+width: 400px;
+background: rgba(255, 255, 255, 0.45);
+box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+backdrop-filter: blur(3px);
+-webkit-backdrop-filter: blur(3px);
 border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  border-radius: 10px;
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-  padding: 50px 35px;
+border: 1px solid rgba(255, 255, 255, 0.18);
+position: absolute;
+transform: translate(-50%, -50%);
+top: 50%;
+left: 50%;
+border-radius: 10px;
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border: 2px solid rgba(255, 255, 255, 0.1);
+box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+padding: 50px 35px;
+margin-top: 100px;
 }
+
 
 form * {
-  font-family: "Poppins", sans-serif;
-  color: black;
-  letter-spacing: 0.5px;
-  outline: none;
-  border: none;
-  /* background: red; */
+font-family: "Poppins", sans-serif;
+color: black;
+letter-spacing: 0.5px;
+outline: none;
+border: none;
 }
 form h3 {
-  font-size: 32px;
-  font-weight: 500;
-  line-height: 42px;
-  text-align: center;
+font-size: 32px;
+font-weight: 500;
+line-height: 42px;
+text-align: center;
+border-bottom: 1px solid dimgrey;
 }
 label {
-  display: block;
-  margin-top: 30px;
-  font-size: 18px;
-  font-weight: 500;
+display: block;
+margin-top: 30px;
+font-size: 18px;
+font-weight: 500;
 }
 input {
-  display: block;
-  height: 50px;
-  width: 100%;
-  background-color: transparent !important;
-  border-radius: 3px;
-  padding: 0 10px;
-  margin-top: 8px;
-  font-size: 16px;
-  font-weight: 300;
-  border-bottom: 1px solid dimgray;
+display: block;
+height: 50px;
+width: 100%;
+background-color: transparent !important;
+border-radius: 3px;
+padding: 0 10px;
+margin-top: 8px;
+font-size: 16px;
+font-weight: 300;
+border-bottom: 1px solid dimgray;
 }
 input:hover {
-  border: 1px solid dimgray !important;
+border: 1px solid dimgray !important;
 }
 ::placeholder {
-  color: dimgray !important;
+color: dimgray !important;
 }
 button {
-  margin-top: 50px;
-  width: 100%;
-  background: linear-gradient(to left, #ff512f, #1845ad);
-  padding: 15px;
-  font-size: 18px;
-  color: wheat !important;
-  border-radius: 6px;
-  cursor: pointer;
+margin-top: 50px;
+width: 100%;
+background: linear-gradient(to left, #ff512f, #1845ad);
+padding: 15px;
+font-size: 18px;
+color: wheat !important;
+border-radius: 6px;
+cursor: pointer;
 }
 .social {
-  display: flex;
-  margin-top: 30px;
+display: flex;
+margin-top: 30px;
 }
-.social div{
-  width: 150px;
-  /* height: 60px; */
-  border-radius: 3px;
-  padding: 5px 10px 10px 5px; 
-  color: black; 
-  background: transparent;
-  text-align: center;
-  justify-content: center;
-  font-size: 20px;
+.social div {
+width: 150px;
+border-radius: 3px;
+padding: 5px 10px 10px 5px;
+color: black;
+background: transparent;
+text-align: center;
+justify-content: center;
+font-size: 20px;
 }
-.social div:hover{
-  /* background-color: dimgray; */
-  cursor: pointer;
-  color: dimgray !important;
+.social div:hover {
+cursor: pointer;
+color: dimgray !important;
 }
-.social .fb{
-  margin-left: 25px;
-
+.social .fb {
+margin-left: 25px;
 }
 .social i {
 margin-right: 4px;
 }
+.go .icon-text :hover {
+color: dimgray !important;
+}
+
+
+/* ======= Unprotected Navbar ===== */
+.unprotected-navbar {
+display: flex;
+justify-content: flex-end;
+width: 40%;
+position: absolute;
+top: 50px;
+right: 60px;
+height: 70px;
+align-items: center;
+}
+.navbar-li {
+margin-right: 20px;
+list-style: none;
+text-decoration: none;
+font-size: 30px;
+
+
+justify-content: center;
+margin-left: 10px;
+font-weight: 700;
+}
+.navbar-li a {
+text-decoration: none;
+color: black;
+background-image: linear-gradient(to right, #1845ad, #f09819);
+background-clip: text;
+-webkit-background-clip: text;
+color: transparent;
+}
+
+
+.navbar-li:last-child {
+margin-right: 0;
+}
+
+
